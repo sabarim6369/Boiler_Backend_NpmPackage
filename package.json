@@ -1,18 +1,12 @@
 {
-  "name": "boilerbackend-cli",
-  "version": "1.0.12",
+  "name": "Backend",
+  "version": "1.0.0",
   "main": "index.js",
-  "bin": {
-    "boilerbackend-cli": "./index.js"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "license": "ISC",
-  "description": "My backend boilerplate CLI",
   "dependencies": {
-    "boilerbackend-cli": "^1.0.0",
-    "dotenv": "^16.3.1",
+    "dotenv": "^16.4.1",
     "express": "^4.18.2",
     "mongoose": "^7.6.0",
     "prompts": "^2.4.2"
