@@ -28,7 +28,8 @@ function copyTemplateDir(srcDir, destDir) {
     message: 'Which backend boilerplate do you want to use?',
     choices: [
       { title: 'Express (REST API)', value: 'express' },
-      { title: 'GraphQL (Apollo Server)', value: 'graphql' }
+      { title: 'GraphQL (Apollo Server)', value: 'graphql' },
+      { title: 'gRPC (Client + Server)', value: 'Grpc' }   // ✅ Added gRPC option
     ]
   });
 
