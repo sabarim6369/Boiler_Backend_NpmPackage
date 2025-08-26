@@ -1,19 +1,26 @@
 # 🚀 BoilerBackend CLI
 
-A minimal, production-ready backend boilerplate CLI to kickstart your Node.js REST API or GraphQL API project in seconds — with just one command!
+A minimal, production-ready backend boilerplate CLI to kickstart your **Node.js** (REST, GraphQL, gRPC) or **ASP.NET Web API** project in seconds — with just one command!  
 
-Built with ❤️ by [sabarim6369](https://github.com/sabarim6369)
+Built with ❤️ by [sabarim6369](https://github.com/sabarim6369)  
 
 ---
 
-## ✨ Features
+## ✨ Features  
 
-- ✅ Select between Express (REST API) or GraphQL (Apollo Server)
-- 🌿 MongoDB Integration with Mongoose
-- 🧱 MVC Folder Structure for Both
-- ⚡️ GraphQL Resolver Structure
+- ✅ Choose between:
+  - **Express (REST API)**
+  - **GraphQL (Apollo Server)**
+  - **gRPC (Client + Server+MongoDB)**
+  - **ASP.NET Web API (PostgreSQL + EF Core)**
+- 🌿 MongoDB Integration with Mongoose (Node.js templates)
+- 🐘 PostgreSQL Integration (for ASP.NET Core)
+- 🧱 Clean MVC Folder Structure (Node.js)
+- ⚡ GraphQL Resolver Structure
+- 🔗 gRPC Client + Server Setup
+- 🏗 Ready-to-use ASP.NET Web API Controllers & Config
 - ⚙️ Environment Variable Setup
-- 🔁 Ready-to-use API routes
+- 🔁 Pre-configured API routes
 
 ---
 
@@ -57,6 +64,42 @@ your-project/
 ├── server.js
 └── .env
 ```
+🔹 For gRPC (Client + Server)
+```bash
+your-project/
+├── proto/
+│   └── service.proto
+├── server/
+│   ├── server.js
+│   └── handlers/
+├── client/
+│   └── client.js
+├── config/
+├── models/
+├── .env
+└── package.json
+
+```
+🔹 For ASP.NET Web API
+```bash
+your-project/
+├── Controllers/
+├── Db/
+├── DIExtension/
+├── Models/
+├── Services/
+├── Properties/
+├── bin/
+├── obj/
+├── appsettings.json
+├── appsettings.Development.json
+├── your-project.csproj
+├── your-project.http
+└── Program.cs
+```
+dotnet restore
+dotnet run
+
 
 👤 Author
 Created with ❤️ by [sabarim6369](https://github.com/sabarim6369)
