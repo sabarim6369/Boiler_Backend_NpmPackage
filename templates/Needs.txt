@@ -1,0 +1,16 @@
+
+To update the table------>
+
+                dotnet ef migrations add InitialCreate
+                dotnet ef database update
+dotnet build---->to see the build and errors
+dotnet run
+
+
+
+dotnet new webapi -n UserAuthDemo
+
+
+Add packages------>
+            dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
+            dotnet add package Microsoft.EntityFrameworkCore.Tools

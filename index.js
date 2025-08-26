@@ -29,7 +29,8 @@ function copyTemplateDir(srcDir, destDir) {
     choices: [
       { title: 'Express (REST API)', value: 'express' },
       { title: 'GraphQL (Apollo Server)', value: 'graphql' },
-      { title: 'gRPC (Client + Server)', value: 'Grpc' }   // ✅ Added gRPC option
+      { title: 'gRPC (Client + Server)', value: 'Grpc' },
+      {title:'Asp.Net Web API',value:'Aspdotnetwebapi'}
     ]
   });
 
@@ -65,8 +66,11 @@ function copyTemplateDir(srcDir, destDir) {
 
   try {
     console.log('\n📦 Installing dependencies...');
+ if (boilerplateChoice === 'Aspdotnetwebapi') {
+    execSync('dotnet restore', { cwd: targetPath, stdio: 'inherit' });
+  } else {
     execSync('npm install', { cwd: targetPath, stdio: 'inherit' });
-    console.log(`\n✅ ${boilerplateChoice.toUpperCase()} backend boilerplate ready in folder '${folderName}'!`);
+  }    console.log(`\n✅ ${boilerplateChoice.toUpperCase()} backend boilerplate ready in folder '${folderName}'!`);
     console.log('💡 Update your .env file and start coding!\n');
   } catch (err) {
     console.error('\n❌ Failed to install dependencies:', err.message);
